@@ -1,39 +1,38 @@
 {
-  "name": "quizapp-native-components-lib",
+  "name": "quizApp-native-components-lib",
   "version": "1.0.0",
   "description": "",
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "main": "./dist/index.js",
   "scripts": {
-    "build": "yarn build:esm ",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
+    "build": "cd ./node_modules/typescript/bin && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iSued/quizApp-native-components-lib.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/iSued/quizApp-native-components-lib/issues"
   },
   "homepage": "https://github.com/iSued/quizApp-native-components-lib#readme",
-  "devDependencies": {
-    "@types/react": "^17.0.9",
-    "react": "^17.0.2",
-    "typescript": "^4.3.2",
-    "react-native-svg": "^12.1.1"
-  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-native-fontawesome": "^0.2.6",
-    "react-native": "^0.64.2",
-    "@types/react-native": "^0.64.10"
+    "react-native-svg": "^12.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.9",
+    "@types/react-native": "^0.64.10",
+    "typescript": "^4.3.2",
+    "react": "^17.0.2",
+    "react-native": "^0.64.2"
   },
   "peerDependencies": {
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-native": "^0.64.2"
   }
 }

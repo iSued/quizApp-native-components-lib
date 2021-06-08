@@ -2,27 +2,31 @@ import React from "react";
 import { View, Text, StyleSheet, Image, TouchableWithoutFeedback, FlatList, } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faStopwatch, faEye, faThumbsUp, faBookmark, } from "@fortawesome/free-solid-svg-icons";
-const HomeCourses = ({ card }) => {
-    const [selectedIndex, setSelectedIndex] = React.useState(0);
-    const flatListRef = React.useRef();
+var HomeCourses = function (_a) {
+    var card = _a.card;
+    var _b = React.useState(0), selectedIndex = _b[0], setSelectedIndex = _b[1];
+    var flatListRef = React.useRef();
     return (React.createElement(View, { style: styles.container },
         React.createElement(View, { style: { flex: 0.5 } },
-            React.createElement(FlatList, { style: styles.menu, horizontal: true, showsHorizontalScrollIndicator: false, data: card.categories, ref: flatListRef, renderItem: ({ item, index }) => (React.createElement(TouchableWithoutFeedback, { key: index, onPress: () => {
-                        setSelectedIndex(index);
-                        flatListRef.current.scrollToIndex({
-                            index: index,
-                            animated: true,
-                        });
-                    } },
-                    React.createElement(View, { key: index, style: selectedIndex === index ? styles.selected : styles.menuItem },
-                        React.createElement(Text, null, item)))) })),
+            React.createElement(FlatList, { style: styles.menu, horizontal: true, showsHorizontalScrollIndicator: false, data: card.categories, ref: flatListRef, renderItem: function (_a) {
+                    var item = _a.item, index = _a.index;
+                    return (React.createElement(TouchableWithoutFeedback, { key: index, onPress: function () {
+                            setSelectedIndex(index);
+                            flatListRef.current.scrollToIndex({
+                                index: index,
+                                animated: true,
+                            });
+                        } },
+                        React.createElement(View, { key: index, style: selectedIndex === index ? styles.selected : styles.menuItem },
+                            React.createElement(Text, null, item))));
+                } })),
         React.createElement(View, { style: {
                 flex: 5,
                 alignItems: "center",
             } },
             React.createElement(View, { style: styles.courseCard },
                 React.createElement(View, { style: styles.cardImageContainer },
-                    React.createElement(Image, { source: { uri: `${card.thumbnail}` }, style: styles.cardImage })),
+                    React.createElement(Image, { source: { uri: "" + card.thumbnail }, style: styles.cardImage })),
                 React.createElement(View, { style: styles.cardHeader },
                     React.createElement(View, null,
                         React.createElement(Text, { style: styles.cardHeaderCategory }, card.author)),
@@ -47,7 +51,7 @@ const HomeCourses = ({ card }) => {
                                 marginLeft: 20,
                             } })))))));
 };
-const styles = StyleSheet.create({
+var styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: "column",
@@ -125,3 +129,4 @@ const styles = StyleSheet.create({
     },
 });
 export default HomeCourses;
+//# sourceMappingURL=index.native.js.map
