@@ -1,39 +1,31 @@
 {
   "compilerOptions": {
-    "outDir": "./build/",
-    "module": "esnext",
-    "target": "es5",
-    "lib": ["es6", "dom"],
-    "typeRoots": [
-      "./typings" // path to your typings directory (relative to tsconfig.json)
-    ],
-    "sourceMap": true,
+    "target": "esnext",
+    "module": "commonjs",
+    "lib": ["es6"],
     "allowJs": true,
-    "jsx": "react",
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": false,
+    "jsx": "react-native",
     "noImplicitAny": false,
-    "importHelpers": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "incremental": true /* Enable incremental compilation */,
+    "isolatedModules": true,
     "strict": true,
-    "resolveJsonModule": true,
-    "isolatedModules": false,
-    "noEmit": false,
-    "strictPropertyInitialization": false
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "outDir": "build/dist",
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "declaration": true /* Generates corresponding '.d.ts' file. */,
+    "sourceMap": true /* Generates corresponding '.map' file. */
   },
   "exclude": [
-    "node_modules/**",
-    "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest"
+    "example",
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
   ]
 }

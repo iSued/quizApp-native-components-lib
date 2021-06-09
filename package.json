@@ -1,38 +1,51 @@
 {
-  "name": "quizApp-native-components-lib",
+  "name": "quiz-app-components-library",
   "version": "1.0.0",
   "description": "",
-  "main": "./build/index.js",
-  "scripts": {
-    "build": "cd ./node_modules/typescript/bin && tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "./build/dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iSued/quizApp-native-components-lib.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Sued Sinani <suedsinani@protonmail.ch",
+  "license": "",
   "bugs": {
     "url": "https://github.com/iSued/quizApp-native-components-lib/issues"
   },
-  "homepage": "https://github.com/iSued/quizApp-native-components-lib#readme",
+  "scripts": {
+    "build": "cd lib && tsc && cp ../package.json ../build/dist/ && Echo Build completed!",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "peerDependencies": {
+    "react": ">= 16.x.x",
+    "react-native": ">=0.63.x"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.53",
+    "@types/react-native": "^0.63.25",
+    "react-native-typescript-transformer": "^1.2.13",
+    "typescript": "^4.0.3",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
+    "prettier": "^2.1.2"
+  },
+  "husky": {},
+  "lint-staged": {
+    "./src/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "eslint src/*.js --fix-dry-run"
+    ]
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-native-fontawesome": "^0.2.6",
     "react-native-svg": "^12.1.1"
-  },
-  "devDependencies": {
-    "@types/react": "^17.0.9",
-    "@types/react-native": "^0.64.10",
-    "typescript": "^4.3.2",
-    "react": "^17.0.2",
-    "react-native": "^0.64.2"
-  },
-  "peerDependencies": {
-    "react": "^17.0.2",
-    "react-native": "^0.64.2"
   }
 }
