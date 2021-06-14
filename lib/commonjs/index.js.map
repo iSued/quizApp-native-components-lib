@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.tsx"],"names":[],"mappings":";;;;;;;;;;;;AAAA","sourcesContent":["import CoursesHome from \"./CoursesHome/index\";\r\n\r\nexport { CoursesHome };\r\n"]}

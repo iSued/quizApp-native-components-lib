@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "react-native-quizApp-components-lib": ["./src/index"]
+      "react-native-quizApp-components-lib": ["./index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
