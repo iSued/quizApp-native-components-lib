@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.tsx"],"names":["CoursesHome"],"mappings":"AAAA,OAAOA,WAAP,MAAwB,qBAAxB;AAEA,SAASA,WAAT","sourcesContent":["import CoursesHome from \"./CoursesHome/index\";\r\n\r\nexport { CoursesHome };\r\n"]}
