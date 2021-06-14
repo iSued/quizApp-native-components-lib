@@ -1,9 +1,3 @@
-import { NativeModules } from 'react-native';
+import CoursesHome from "./CoursesHome/index";
 
-type QuizAppReactNativeLibType = {
-  multiply(a: number, b: number): Promise<number>;
-};
-
-const { QuizAppReactNativeLib } = NativeModules;
-
-export default QuizAppReactNativeLib as QuizAppReactNativeLibType;
+export { CoursesHome };
