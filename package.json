@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "lib\\commonjs\\index.js",
+  "react-native": "lib\\module\\index.js",
+  "module": "lib\\module\\index.js",
+  "types": "lib\\typescript\\src\\index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "bob build"
@@ -45,9 +48,6 @@
     "react-native": "^0.64.2",
     "react-native-svg": "^12.1.1"
   },
-  "react-native": "src\\index.tsx",
-  "module": "lib\\module\\index.js",
-  "types": "lib\\typescript\\src\\index.d.ts",
   "files": [
     "src",
     "lib",
